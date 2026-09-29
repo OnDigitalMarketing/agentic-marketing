@@ -38,11 +38,24 @@ Read the campaign or plan whose results you are reading. A number with no hypoth
 6. Recommend: scale, modify, or kill.
 7. Name what should be written back into `01_Strategy` or `02_Customers`, and ask before writing it.
 
-## The arithmetic
+## The arithmetic, and what this folder owes the rest of the system
 
-Revenue is Sessions x Conversion Rate x Value. When revenue moves, say which of the three moved, because each has a different fix.
+> **Sessions x Conversion Rate x Value = Revenue**
 
-Marketing spend is capital allocation. Read `03_budget_data` before recommending more of anything. Money already committed is not available, and a recommendation that ignores pacing is a wish.
+When revenue moves, say which of the three moved, because each has a different fix and the blended number hides all of them.
+
+**Two of those three terms are yours.** `03_Campaigns` buys sessions and knows what they cost. It does not know the conversion rate or the value, and it reads both from here. That makes this folder a dependency for every campaign decision rather than a reporting function at the end of the line.
+
+| Term | Where you produce it | Who reads it |
+|---|---|---|
+| Conversion Rate | `00_site_data`, by landing page and by channel | Every campaign, before and after launch |
+| Value per conversion | `01_revenue_data`, then lifetime value with `02_Customers/02_retention` | The acquisition ceiling in `Customers.md` |
+
+So keep the conversion rate current and segmented. A single site-wide figure is close to useless to a campaign, because the rate that matters is the one for the page that campaign sends traffic to.
+
+**Diagnose, do not just report.** When a rate is low, `00_site_data` holds the experience analytics that say why: Microsoft Clarity rage clicks, dead clicks, session recordings, form abandonment by field. A campaign that missed its conversion rate needs to know whether it bought the wrong traffic or sent good traffic to a broken page. Those are different failures with different owners.
+
+**Marketing spend is capital allocation.** Read `03_budget_data` before recommending more of anything. Money already committed is not available, and a recommendation that ignores pacing is a wish.
 
 ## Building dashboards
 

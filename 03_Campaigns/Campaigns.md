@@ -29,31 +29,66 @@ Every campaign, in any channel, is written down before it runs:
 6. **Kill rule.** The result that stops it. Written before launch, not after.
 7. **Time to signal.** When we expect to know anything.
 
-## The arithmetic, checked before you spend
+## The arithmetic
 
-Two equations govern every campaign in every folder below this one. Run both before committing money, not after the results come in.
+Two equations govern every campaign in every folder below this one. They answer different questions and you need both, because each one is misleading on its own.
 
-> **Sessions x Conversion Rate x Value = Revenue**
+> **Sessions x Conversion Rate x Value = Revenue**  *(is the campaign any good?)*
 >
-> **Customer Lifetime Value minus Customer Acquisition Cost = Post-Acquisition Value**
+> **Customer Lifetime Value minus Customer Acquisition Cost = Post-Acquisition Value**  *(can we afford to keep doing it?)*
 
-**1. Name your term.** A campaign moves sessions, conversion rate, or value. Say which one before you start. A campaign that lifts sessions while conversion rate falls has done nothing, and it will still look busy in the report.
+### Who owns which term
 
-**2. Check the ceiling before you spend.** Read the maximum acceptable acquisition cost from `02_Customers/Customers.md`. Then compute what this campaign would have to deliver:
+This is the part that makes the two equations work together. No single folder holds all the numbers.
+
+| Term | Owned by | Where the number comes from |
+|---|---|---|
+| Sessions | **This folder** | Platform reporting and `04_Analytics/00_site_data` |
+| Cost per session | **This folder** | Spend divided by sessions delivered |
+| Conversion Rate | `04_Analytics` | `00_site_data` and `02_campaign_performance_data` |
+| Value per conversion | `04_Analytics` and `02_Customers` | `01_revenue_data`, then lifetime value from `02_retention` |
+| Acquisition ceiling | `02_Customers` | `Customers.md`, from lifetime value minus required margin |
+
+A campaign buys sessions. It does not buy conversion rate, and it does not buy value. Those are earned by the offer, the page, and the product, and they are measured somewhere else. **Naming where each number will come from before you launch is the whole discipline here**, because after the fact everyone argues about attribution instead of about the business.
+
+### Before you spend
+
+**1. Name the term you are moving.** Sessions, conversion rate, or value. A campaign that lifts sessions while conversion rate falls has moved nothing, and it will still look busy in the report.
+
+**2. Write down what you expect for all three,** not just the one you are moving. This is the forecast you will be judged against:
 
 ```
-projected cost per acquisition  =  planned spend / expected conversions
+expected sessions  x  expected conversion rate  x  expected value  =  expected revenue
 ```
 
-If that number is above the ceiling, the campaign is upside down before it launches. Three honest responses, in order of preference:
+If you cannot estimate conversion rate and value, pull them from `04_Analytics` and `02_Customers` rather than inventing them. If they do not exist yet, say unknown and treat the campaign as a measurement exercise.
 
-- Change the campaign so it can clear the ceiling.
-- Say the ceiling is wrong and go fix the number in `02_Customers` with evidence.
-- Run it anyway as a bounded learning spend, with the violation stated out loud and the amount you are willing to lose written down.
+**3. Check the ceiling.** Read the maximum acceptable acquisition cost from `02_Customers/Customers.md`:
 
-What you do not do is launch without checking, discover the gap in the retrospective, and call it a learning.
+```
+projected cost per acquisition  =  planned spend / (expected sessions x expected conversion rate)
+```
 
-**3. If the ceiling is unknown, say so.** A campaign built on an unknown ceiling is a bet, not a plan. That may be the right call early on. It is only the wrong call when nobody said it out loud.
+Above the ceiling, the campaign is upside down before it launches. Three honest responses, in order of preference: change the campaign so it can clear the ceiling; say the ceiling is wrong and go fix that number in `02_Customers` with evidence; or run it as a bounded learning spend with the violation stated out loud and the loss you accept written down.
+
+What you do not do is launch unchecked, find the gap in the retrospective, and relabel it a learning.
+
+### After it runs, decompose
+
+Compare actual against expected for each term separately. A single blended cost per acquisition hides which part broke, and the three failures have different owners and different fixes.
+
+| What happened | What it means | Who fixes it |
+|---|---|---|
+| Sessions missed | Targeting, creative, or budget delivery | This folder |
+| Sessions landed, conversion rate missed | The page or the offer did not match what the ad promised | `04_Analytics`, then the offer |
+| Sessions and rate landed, value missed | You bought the wrong customer | `02_Customers` |
+| All three landed, acquisition cost still too high | The channel cannot clear the ceiling at this volume | Strategy, not optimization |
+
+### Why cost per acquisition alone will mislead you
+
+It is one number standing in for three, so it hides the trade you actually made. A campaign can hit an acceptable cost per acquisition while acquiring customers who never return, which shows up two quarters later as falling lifetime value rather than as a campaign failure. Another can miss its cost per acquisition badly while proving a conversion rate that makes a whole channel viable.
+
+Report cost per acquisition. Report the three terms underneath it too, or you have described the result without explaining it.
 
 ## Guardrails
 
