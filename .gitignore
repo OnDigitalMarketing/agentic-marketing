@@ -1,0 +1,48 @@
+# ---------------------------------------------------------------------------
+# Data stays on your machine.
+#
+# Every folder that holds source data is ignored by default, and only its
+# README is tracked. This is deliberate. Survey exports, keyword pulls,
+# analytics downloads, and licensed third-party research do not belong in a
+# public repository, and git history keeps them even after a delete.
+#
+# If you want a file tracked, add it explicitly: git add -f <path>
+# ---------------------------------------------------------------------------
+
+**/customer_data/**
+!**/customer_data/README.md
+
+**/keyword_data/**
+!**/keyword_data/README.md
+
+**/search_console/**
+!**/search_console/README.md
+
+**/analytics_data/**
+!**/analytics_data/README.md
+
+# The working area. Outputs are disposable by design.
+99_Outputs/**
+!99_Outputs/README.md
+
+# Common data formats, anywhere in the tree
+*.csv
+*.xlsx
+*.xls
+*.zip
+*.pdf
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.*
+secrets.*
+
+# OS and editor
+.DS_Store
+.idea/
+.vscode/
+*.log
