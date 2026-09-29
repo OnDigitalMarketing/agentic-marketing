@@ -9,7 +9,7 @@ updated: [YYYY-MM-DD]
 
 # 01_Microsoft_Ads
 
-Read `../SKILL.md` first.
+Read `../Paid_Search.md` first.
 
 ## What it is good for
 

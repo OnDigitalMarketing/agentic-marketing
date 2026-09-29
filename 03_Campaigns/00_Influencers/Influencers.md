@@ -19,7 +19,7 @@ Partner lists with audience size and overlap estimates, agreement terms, tracked
 
 ## How work gets done
 
-1. Start from audience overlap with `02_Customers/icp.md`, not from follower count.
+1. Start from audience overlap with `02_Customers/Customers.md`, not from follower count.
 2. Name the mutual value. If you cannot say what the partner gets, there is no deal, only an ask.
 3. Agree the deliverable, the timing, the tracking, and the disclosure requirements in writing before anything runs.
 4. Track with a link you control, because you will not get the partner's analytics.

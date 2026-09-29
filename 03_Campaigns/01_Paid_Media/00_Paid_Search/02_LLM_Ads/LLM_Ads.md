@@ -9,7 +9,7 @@ updated: [YYYY-MM-DD]
 
 # 02_LLM_Ads
 
-Read `../SKILL.md` first.
+Read `../Paid_Search.md` first.
 
 ## What this folder is for
 

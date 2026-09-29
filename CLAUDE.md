@@ -31,7 +31,7 @@ Numbers set the order at every level. Any folder ending in `_data` holds source 
 
 Every folder carries exactly one of two files, and the folder name tells you which:
 
-- A folder where work happens has a `SKILL.md` saying how that work is done.
+- A folder where work happens has one markdown file named after the folder (`00_CMO/CMO.md`, `03_LinkedIn/LinkedIn.md`) saying how that work is done and holding the venture's answers.
 - A folder ending in `_data` holds source files and has a `README.md` saying what belongs there. Nothing inside it is ever committed.
 
 - Before doing any work in a folder, read that folder's skill file. If it is missing, say so and ask how to proceed.

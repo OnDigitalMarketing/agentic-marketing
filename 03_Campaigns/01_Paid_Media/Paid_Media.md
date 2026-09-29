@@ -19,7 +19,7 @@ Platform exports by campaign, ad set, and creative: spend, impressions, clicks, 
 
 ## Before you start
 
-Read `02_Customers/icp.md` for who we are targeting, and get the current Customer Lifetime Value figure. Without it you cannot say what a customer is worth, and every number below is decoration.
+Read `02_Customers/Customers.md` for who we are targeting, and get the current Customer Lifetime Value figure. Without it you cannot say what a customer is worth, and every number below is decoration.
 
 ## How work gets done
 

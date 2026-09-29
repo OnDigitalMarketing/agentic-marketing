@@ -9,7 +9,7 @@ updated: [YYYY-MM-DD]
 
 # 03_LinkedIn
 
-Read `../SKILL.md` first.
+Read `../Paid_Social.md` first.
 
 ## What it is good for
 

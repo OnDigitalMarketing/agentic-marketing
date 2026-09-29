@@ -9,7 +9,7 @@ updated: [YYYY-MM-DD]
 
 # 02_Facebook
 
-Read `../SKILL.md` first.
+Read `../Paid_Social.md` first.
 
 ## What it is good for
 

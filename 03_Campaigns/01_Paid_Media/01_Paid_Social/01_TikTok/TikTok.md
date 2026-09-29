@@ -9,7 +9,7 @@ updated: [YYYY-MM-DD]
 
 # 01_TikTok
 
-Read `../SKILL.md` first.
+Read `../Paid_Social.md` first.
 
 ## What it is good for
 
@@ -25,7 +25,7 @@ Reaching people who are not searching, cheaply, when your offer can be explained
 - Ads that look like ads get skipped. Native production style outperforms brand film reliably.
 - The first two seconds decide whether anything else matters. Measure hold rate.
 - Spark Ads, which boost real organic posts, usually beat purpose-built ads.
-- Audience skews younger than most business-to-business buyer profiles. Check `02_Customers/icp.md` honestly before spending here.
+- Audience skews younger than most business-to-business buyer profiles. Check `02_Customers/Customers.md` honestly before spending here.
 
 ## Guardrails
 

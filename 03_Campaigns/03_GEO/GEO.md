@@ -9,7 +9,7 @@ updated: [YYYY-MM-DD]
 
 # 03_GEO
 
-Read `../SKILL.md` first.
+Read `../Campaigns.md` first.
 
 ## What this folder is for
 

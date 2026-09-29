@@ -9,7 +9,7 @@ updated: [YYYY-MM-DD]
 
 # 00_Paid_Search
 
-Read `../SKILL.md` first. This file covers only what is different about search.
+Read `../Paid_Media.md` first. This file covers only what is different about search.
 
 ## What search is good for
 
@@ -27,7 +27,7 @@ Capturing demand that already exists. Somebody typed the query, so intent is giv
 1. Pull the search terms report before touching bids. What people actually typed beats what you thought you bought.
 2. Split brand from non-brand in every report.
 3. Test one thing: keyword set, landing page, or offer.
-4. Measure cost per acquisition against the ceiling from `../SKILL.md`, not against last month.
+4. Measure cost per acquisition against the ceiling from `../Paid_Media.md`, not against last month.
 
 ## Guardrails
 

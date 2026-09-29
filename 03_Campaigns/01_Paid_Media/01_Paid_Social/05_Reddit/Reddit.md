@@ -9,7 +9,7 @@ updated: [YYYY-MM-DD]
 
 # 05_Reddit
 
-Read `../SKILL.md` first.
+Read `../Paid_Social.md` first.
 
 ## What it is good for
 

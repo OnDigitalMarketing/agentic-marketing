@@ -9,7 +9,7 @@ updated: [YYYY-MM-DD]
 
 # 02_retention
 
-Read `../SKILL.md` first.
+Read `../Customers.md` first.
 
 ## What this folder is for
 

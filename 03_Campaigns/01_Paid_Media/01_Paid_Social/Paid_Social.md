@@ -9,7 +9,7 @@ updated: [YYYY-MM-DD]
 
 # 01_Paid_Social
 
-Read `../SKILL.md` first. This file covers what all paid social shares. Each platform folder covers what is specific to it.
+Read `../Paid_Media.md` first. This file covers what all paid social shares. Each platform folder covers what is specific to it.
 
 ## What paid social is good for
 
@@ -24,7 +24,7 @@ Reaching people who were not looking for you. Nobody on these platforms typed a 
 
 ## How work gets done
 
-1. Pick the platform from where your buyer already spends attention, using `02_Customers/icp.md`. Not from which platform you enjoy.
+1. Pick the platform from where your buyer already spends attention, using `02_Customers/Customers.md`. Not from which platform you enjoy.
 2. Set the acquisition cost ceiling before you build creative.
 3. Test one variable. Audience, creative, or offer.
 4. Plan the creative refresh before launch, because you will need it sooner than you think.

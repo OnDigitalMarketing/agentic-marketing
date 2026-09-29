@@ -6,7 +6,7 @@ A working marketing system built out of folders, markdown files, and a short set
 
 An AI agent needs five things before it produces anything worth keeping: an objective, context/data, tools, guardrails, and feedback. Most agent demos supply the objective inside a clever prompt and skip the other four, which is why the output looks impressive for about a minute and then turns out to be unusable.
 
-A folder structure supplies four of the five, in a form you can read, correct, and hand to somebody else. `CLAUDE.md` at the root carries the guardrails. The numbered folders carry the context, separated by stage so the agent loads only what the question needs. Each folder's `SKILL.md` carries the objective for that piece of work. The data folders carry the feedback, because that is where real evidence lands.
+A folder structure supplies four of the five, in a form you can read, correct, and hand to somebody else. `CLAUDE.md` at the root carries the guardrails. The numbered folders carry the context, separated by stage so the agent loads only what the question needs. Each folder's own markdown file carries the objective for that piece of work. The data folders carry the feedback, because that is where real evidence lands.
 
 The part people underestimate is the fifth one. Your proprietary customer data and context are the only durable advantage here. Everyone has the same models these days.
 
@@ -43,9 +43,11 @@ That one rule prevents most of the ways these systems rot.
 99_Outputs/                the only folder where new files are created
 ```
 
-Numbers set the order at every level. When you ask for a full pass, the agent works through them in sequence, reading each folder's `SKILL.md` as it arrives.
+Numbers set the order at every level. When you ask for a full pass, the agent works through them in sequence, reading each folder's file as it arrives.
 
-**Every folder carries exactly one of two files, and its name tells you which.** A folder where work happens has a `SKILL.md` describing how that work is done. A folder ending in `_data` holds source files and has a `README.md` describing what belongs there. Twenty-three skill files and thirty-one data READMEs, so there is never a folder you open and wonder about.
+**One file per folder, named after the folder.** Open `03_LinkedIn/` and you find `LinkedIn.md`. Open `02_SEO/` and you find `SEO.md`. That file is pre-built and ready to use: it says how work gets done in that folder, and where a venture has to supply its own facts, it says so in brackets.
+
+Folders ending in `_data` are the exception. They hold your source files and carry a `README.md` naming what belongs there. Twenty-three working files, thirty-one data READMEs, and no folder you open and wonder about.
 
 SEO and GEO sit in separate folders because the work is genuinely different. Search returns a ranked list you can measure. An assistant returns a synthesized answer that changes between sessions, with no position to track and no console reporting your impressions. Same buyer, different problem.
 
@@ -134,7 +136,7 @@ An agent with permission to write anywhere spreads files across your system, and
 
 ## Start here
 
-1. **Clone it and delete my examples.** Rename the three `.template.md` files by dropping `.template`, then fill them in for your venture.
+1. **Clone it and fill in the brackets.** Every working file is already written. The brackets mark the places only you can answer.
 2. **Write `00_CMO/CMO.md` first.** It takes about an hour if you do it honestly. Every other folder reads it, so a vague one produces vague work everywhere downstream.
 3. **Put one real dataset in.** Pick the least glamorous thing you have. Last quarter's ad performance, or twenty support tickets. A system with one real file beats a beautiful empty structure.
 4. **Ask a question that spans folders.** Something like "given what is in `02_Customers`, which channel should get the next dollar, and what would make us stop?" Then read what comes back with the source and derived distinction in mind.
