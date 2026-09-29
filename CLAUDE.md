@@ -12,22 +12,26 @@ Numbers in folder names set the order. Fill in every bracket before first use. Y
 
 | Folder | What it holds | Status |
 |---|---|---|
-| `00_CMO` | Chief marketing officer (CMO) briefing file, the orchestrator for the whole system | Derived |
-| `01_Strategy` | Positioning strategy and the current operating plan | Derived |
-| `02_Customers/customer_data` | Survey exports, interview transcripts, call logs, persona research | **Source. Read only.** |
-| `02_Customers/icp.md` | Ideal customer profile (ICP), written from the data above | Derived |
-| `03_Campaigns/Influencers` | Partner and creator programs, briefs, performance | [Source or derived] |
-| `03_Campaigns/Owned_Media` | Email, blog, newsletter, podcast, and other owned channels | [Source or derived] |
-| `03_Campaigns/Paid_Media` | Paid search and paid social plans, creative, and results | [Source or derived] |
-| `03_Campaigns/SEO_GEO` | Search engine optimization (SEO) and generative engine optimization (GEO) | [Source or derived] |
-| `04_Analytics` | Site, product, and revenue analytics, plus the measurement plan | [Source or derived] |
+| `00_CMO` | Chief marketing officer (CMO) briefing, the orchestrator for the whole system | Derived |
+| `01_Strategy` | Positioning and the current operating plan | Derived |
+| `02_Customers` | Ideal customer profile (ICP), plus acquisition and retention economics | Derived |
+| `03_Campaigns/00_Influencers` | Creator, partner, and earned distribution | Mixed |
+| `03_Campaigns/01_Paid_Media` | Paid search and paid social, broken out by platform | Mixed |
+| `03_Campaigns/02_SEO_GEO` | Search engine optimization (SEO) and generative engine optimization (GEO) | Mixed |
+| `03_Campaigns/03_Owned_Media` | Email, blog, podcast, and community | Mixed |
+| `04_Analytics` | Site, revenue, and cohort measurement | Mixed |
 | `99_Outputs` | The only place new files may be created | Working area |
+
+Numbers set the order at every level. Any folder ending in `_data` holds source files only, is read only, and is never committed.
 
 "Source" means original material that you or a data provider produced. "Derived" means written from source material, usually by Claude. Derived files can be wrong, stale, or circular, and they never outrank source files.
 
 ## Data and skill files in each folder
 
-Each folder holds its own data and its own skill file, named `SKILL.md`. The skill file says how work in that folder is done.
+Every folder carries exactly one of two files, and the folder name tells you which:
+
+- A folder where work happens has a `SKILL.md` saying how that work is done.
+- A folder ending in `_data` holds source files and has a `README.md` saying what belongs there. Nothing inside it is ever committed.
 
 - Before doing any work in a folder, read that folder's skill file. If it is missing, say so and ask how to proceed.
 - If a folder's skill file conflicts with this file, this file wins on where files go and what may be edited, and I make the final call. Tell me about the conflict.

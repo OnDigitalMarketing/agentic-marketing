@@ -22,30 +22,45 @@ That one rule prevents most of the ways these systems rot.
 
 ## The folders
 
-| Folder | What it holds | Status |
-|---|---|---|
-| `00_CMO` | The orchestrator. Mission, operating rules, approval boundaries. Start here. | Derived |
-| `01_Strategy` | Positioning and the current operating plan | Derived |
-| `02_Customers` | Customer evidence, and the ideal customer profile written from it | Source and derived |
-| `03_Campaigns` | Owned media, paid media, search, and partner programs | Source and derived |
-| `04_Analytics` | Measurement plan and performance data | Source and derived |
-| `99_Outputs` | The only folder where new files may be created | Working area |
+```
+00_CMO/                       the orchestrator. mission, rules, approval boundaries
+01_Strategy/                  positioning and the operating plan
+02_Customers/                 who you serve, and the economics of serving them
+   01_acquisition/               how customers were won and what they cost
+   02_retention/                 whether they come back and what they are worth
+03_Campaigns/
+   00_Influencers/               creators, partners, earned distribution
+   01_Paid_Media/
+      00_Paid_Search/            buying demand that already exists
+      01_Paid_Social/            creating demand that does not
+         00_Instagram  01_TikTok  02_Facebook
+         03_LinkedIn   04_YouTube 05_Reddit
+   02_SEO_GEO/                   search engines and AI assistants
+   03_Owned_Media/               email, blog, podcast, community
+04_Analytics/                 site, revenue, and cohort measurement
+99_Outputs/                   the only folder where new files may be created
+```
 
-Numbers set the order. When you ask for a full pass, the agent works through them in sequence, reading each folder's `SKILL.md` as it arrives.
+Numbers set the order at every level. When you ask for a full pass, the agent works through them in sequence, reading each folder's `SKILL.md` as it arrives.
+
+**Every folder carries exactly one of two files, and its name tells you which.** A folder where work happens has a `SKILL.md` describing how that work is done. A folder ending in `_data` holds source files and has a `README.md` describing what belongs there. Nineteen skill files and twenty-three data READMEs, so there is never a folder you open and wonder about.
 
 ## What actually goes in the data folders
 
-This is the question everyone asks second, right after "where do I start."
+This is the question everyone asks second, right after "where do I start." Every `_data` folder has a README naming the exports that belong in it, with a naming convention and the trap to watch for. A sample:
 
 | Folder | Put files like these in it |
 |---|---|
-| `02_Customers/customer_data` | Voice of customer (VoC) call logs and transcripts, customer interview notes, post-purchase and post-course survey exports, Net Promoter Score results, win and loss notes from your customer relationship management (CRM) system, churn reasons, review text from G2 or the App Store, audience research |
-| `03_Campaigns/SEO_GEO/keyword_data` | Keyword exports with volume and intent from Semrush or Ahrefs, Google Search Console performance pulls, competitor page exports, logged generative engine citation checks |
-| `04_Analytics/analytics_data` | Site analytics by channel and landing page from Google Analytics 4, advertising performance by campaign and creative from Google Ads or Meta or LinkedIn, email performance from Klaviyo or Mailchimp, revenue and order exports from Shopify or Stripe, cohort and retention pulls, your customer acquisition cost and lifetime value working file |
+| `02_Customers/00_customer_data` | Voice of customer (VoC) call logs and transcripts, interview notes, survey exports, Net Promoter Score results, win and loss notes, churn reasons, review text |
+| `02_Customers/01_acquisition/00_acquisition_data` | New customers by source, spend by channel, lead-to-customer rates, sales cycle length, your Customer Acquisition Cost working file |
+| `02_Customers/02_retention/00_retention_data` | Repeat purchase history, cohort tables by acquisition month, churn and cancellation records, your Customer Lifetime Value working file |
+| `01_Paid_Media/.../03_LinkedIn/00_LinkedIn_data` | Campaign Manager exports, and the demographic breakdown showing which seniorities were actually served |
+| `02_SEO_GEO/01_search_console_data` | Google Search Console query and page exports, coverage reports |
+| `02_SEO_GEO/03_geo_citation_data` | Logged prompts run against AI assistants, with the model, date, and full response saved |
+| `03_Owned_Media/00_email_data` | Klaviyo or Mailchimp exports, list growth by source, flow performance |
+| `04_Analytics/01_revenue_data` | Shopify or Stripe transactions, revenue by product and channel, contribution margin working files |
 
-Each of those folders has its own README with naming conventions and the questions to answer before anyone analyzes the file.
-
-**Your data never leaves your machine.** Every data folder is ignored by git, and only the READMEs are tracked. That is deliberate. Survey exports and licensed research do not belong in a public repository, and git history keeps them even after you delete the file.
+**Your data never leaves your machine.** Every `_data` folder is ignored by git and only its README is tracked. That is deliberate. Survey exports and licensed research do not belong in a public repository, and git history keeps them even after you delete the file.
 
 ## Start here
 

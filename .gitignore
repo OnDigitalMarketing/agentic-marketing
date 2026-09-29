@@ -1,36 +1,30 @@
 # ---------------------------------------------------------------------------
-# Data stays on your machine.
+# One rule: any folder whose name ends in _data is yours alone.
 #
-# Every folder that holds source data is ignored by default, and only its
-# README is tracked. This is deliberate. Survey exports, keyword pulls,
-# analytics downloads, and licensed third-party research do not belong in a
-# public repository, and git history keeps them even after a delete.
+# Git ignores everything inside it and tracks only its README.md. Survey
+# exports, ad platform pulls, licensed research, and customer records stay on
+# your machine. A public repository keeps history even after you delete a
+# file, so the safe default is enforced here rather than left to discipline.
 #
-# If you want a file tracked, add it explicitly: git add -f <path>
+# To track something inside a _data folder anyway: git add -f <path>
 # ---------------------------------------------------------------------------
 
-**/customer_data/**
-!**/customer_data/README.md
-
-**/keyword_data/**
-!**/keyword_data/README.md
-
-**/search_console/**
-!**/search_console/README.md
-
-**/analytics_data/**
-!**/analytics_data/README.md
+**/*_data/**
+!**/*_data/README.md
 
 # The working area. Outputs are disposable by design.
 99_Outputs/**
 !99_Outputs/README.md
 
-# Common data formats, anywhere in the tree
+# Common data formats, anywhere in the tree, as a second line of defense
 *.csv
+*.tsv
 *.xlsx
 *.xls
 *.zip
 *.pdf
+*.sqlite
+*.db
 
 # Secrets
 .env
