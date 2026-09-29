@@ -4,11 +4,11 @@ A working marketing system built out of folders, markdown files, and a short set
 
 ## Why this shape
 
-An AI agent needs five things before it produces anything worth keeping: an objective, context, tools, guardrails, and feedback. Most agent demos supply the objective inside a clever prompt and skip the other four, which is why the output looks impressive for about a minute and then turns out to be unusable.
+An AI agent needs five things before it produces anything worth keeping: an objective, context/data, tools, guardrails, and feedback. Most agent demos supply the objective inside a clever prompt and skip the other four, which is why the output looks impressive for about a minute and then turns out to be unusable.
 
 A folder structure supplies four of the five, in a form you can read, correct, and hand to somebody else. `CLAUDE.md` at the root carries the guardrails. The numbered folders carry the context, separated by stage so the agent loads only what the question needs. Each folder's `SKILL.md` carries the objective for that piece of work. The data folders carry the feedback, because that is where real evidence lands.
 
-The part people underestimate is the fifth one. Your proprietary customer data and context are the only durable advantage here. Everyone has the same models.
+The part people underestimate is the fifth one. Your proprietary customer data and context are the only durable advantage here. Everyone has the same models these days.
 
 ## The rule that does the most work
 
@@ -66,7 +66,7 @@ Two equations show up in nearly every folder, and any recommendation that cannot
 
 ## What this is not
 
-It will not invent evidence you do not have, and it should tell you when you are asking it to. It does not publish, send, or spend, because those need a human who can be held responsible. It will not turn a vague objective into a strategy, and speeding up a system whose economics do not work just produces bad results faster.
+It will not invent evidence you do not have, and it should tell you when you are asking it to and challenge you directly. It does not publish, send, or spend, because those need a human who can be held responsible. It will not turn a vague objective into a strategy, and speeding up a system whose economics do not work just produces bad results faster.
 
 ## License
 
@@ -75,3 +75,6 @@ MIT. Use it, fork it, teach with it.
 ---
 
 If you are deciding where to begin, the useful question is not which agent to use. It is which repeatable part of your marketing work would become dramatically more valuable if it could learn and act faster. Find that, put its data in the right folder, and start there.
+
+Jake Cook
+Harvard Business School
