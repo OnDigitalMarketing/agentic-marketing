@@ -16,11 +16,12 @@ Numbers in folder names set the order. Fill in every bracket before first use. Y
 | `01_Strategy` | Positioning and the current operating plan | Derived |
 | `02_Customers` | Ideal customer profile (ICP), plus acquisition and retention economics | Derived |
 | `03_Campaigns/00_Influencers` | Creator, partner, and earned distribution | Mixed |
-| `03_Campaigns/01_Paid_Media` | Paid search and paid social, broken out by platform | Mixed |
-| `03_Campaigns/02_SEO_GEO` | Search engine optimization (SEO) and generative engine optimization (GEO) | Mixed |
-| `03_Campaigns/03_Owned_Media` | Email, blog, podcast, and community | Mixed |
-| `04_Analytics` | Site, revenue, and cohort measurement | Mixed |
-| `99_Outputs` | The only place new files may be created | Working area |
+| `03_Campaigns/01_Paid_Media` | Paid search (Google, Microsoft, AI assistant ads) and paid social, by platform | Mixed |
+| `03_Campaigns/02_SEO` | Search engine optimization (SEO), conventional search | Mixed |
+| `03_Campaigns/03_GEO` | Generative engine optimization (GEO), citation by AI assistants | Mixed |
+| `03_Campaigns/04_Owned_Media` | Email, blog, podcast, and community | Mixed |
+| `04_Analytics` | Site, revenue, campaign performance, budget, forecast, and cohort measurement | Mixed |
+| `99_Outputs` | The default place new files are created | Working area |
 
 Numbers set the order at every level. Any folder ending in `_data` holds source files only, is read only, and is never committed.
 
@@ -41,7 +42,7 @@ Every folder carries exactly one of two files, and the folder name tells you whi
 
 ## Folder and file rules
 
-- Do not create a new file anywhere except `99_Outputs` unless I ask you to, specifically, to keep things clean and organized.
+- Create new files in `99_Outputs` by default. This is a tidiness convention rather than a technical limit: one writable folder keeps the repository clean and keeps the system portable across assistants. If I name a different location, use it.
 - Do not create markdown summaries, notes, scratch files, or working files unless I ask and name the location. If you think one would help, say so and wait for approval.
 - Do not edit existing files in place without my approval. Do not create copies, versions, or files with "v2" or "final" in the name unless I say so.
 - Never edit, rename, move, or delete anything without my approval.
