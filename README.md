@@ -91,5 +91,6 @@ MIT. Use it, fork it, teach with it.
 
 If you are deciding where to begin, the useful question is not which agent to use. It is which repeatable part of your marketing work would become dramatically more valuable if it could learn and act faster. Find that, put its data in the right folder, and start there.
 
-Jake Cook
-Harvard Business School
+Jake Cook  
+Lecturer, Harvard Business School  
+Cofounder, OnDigitalMarketing.com
